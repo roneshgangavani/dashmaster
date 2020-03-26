@@ -114,7 +114,7 @@ def update_graph(input_value,c1,c2,yr,mon):
     trace=go.Scatter(x=df_industry['Date_New_quarterly'].values,
                      y=df_industry['marketcap'].values,
                      text=df_industry['Industry'],
-                     mode='line',
+                     mode='lines',
                      name="Market Cap",
                      line_color='rgb(231,107,243)',
                      marker=dict(
@@ -124,7 +124,7 @@ def update_graph(input_value,c1,c2,yr,mon):
     data1 = go.Scatter(
         x=df_industry['Date_New_quarterly'],
         y=df_industry.groupby(['Industry', 'Date_New_quarterly'])['marketcap'].sum(),
-        mode="line",
+        mode="lines",
         text=df_industry['Industry'],
         name="Total Market Cap",
         line_color='rgb(0,176,246)',

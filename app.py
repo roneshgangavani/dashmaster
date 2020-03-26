@@ -111,7 +111,7 @@ def update_graph(input_value,c1,c2,yr,mon):
     df_industry=df_eda[df_eda['Industry']==input_value]
     df_industry=df_industry[df_industry['Year']==yr]
     df_industry = df_industry[df_industry['Month_y.1'] == mon]
-    trace=go.Line(x=df_industry['Date_New_quarterly'].values,
+    trace=go.Scatter(x=df_industry['Date_New_quarterly'].values,
                      y=df_industry['marketcap'].values,
                      text=df_industry['Industry'],
                      mode='line',
@@ -121,7 +121,7 @@ def update_graph(input_value,c1,c2,yr,mon):
                          color=c1
                      )
                      )
-    data1 = go.Line(
+    data1 = go.Scatter(
         x=df_industry['Date_New_quarterly'],
         y=df_industry.groupby(['Industry', 'Date_New_quarterly'])['marketcap'].sum(),
         mode="line",

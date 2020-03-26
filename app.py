@@ -53,7 +53,7 @@ app.layout = html.Div([
                 options=[
                     {'label':ik,'value':ik }for ik in indu
                 ],
-                value='Housing Finance'
+                value='Sugar'
         ),
     ),
     html.Label("Market cap Color"),
